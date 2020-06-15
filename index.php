@@ -8,7 +8,7 @@ Stampate a schermo il testo censurato all'interno di un paragrafo e la lunghezza
     $badword = "";
     //verifico se nella chiamata Get arriva una chiave "badword"
     if (isset($_GET["badword"])) {
-        //leggo il valore della chiamata get ricevuta
+        //salvo in variabile il valore della Get
         $badword = $_GET["badword"];
     }
     //sostituisco la badword con ***
