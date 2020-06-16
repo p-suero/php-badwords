@@ -7,12 +7,12 @@ Stampate a schermo il testo censurato all'interno di un paragrafo e la lunghezza
     //creo una variabile "badword" con carattere vuoto
     $badword = "";
     //verifico se nella chiamata Get arriva una chiave "badword"
-    if (isset($_GET["badword"])) {
+    if (!empty($_GET["badword"])) {
         //salvo in variabile il valore della Get
         $badword = $_GET["badword"];
     }
     //sostituisco la badword con ***
-    $frase_censurata = str_replace($badword, "***", $frase);
+    $frase_censurata = str_ireplace($badword, "***", $frase);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
